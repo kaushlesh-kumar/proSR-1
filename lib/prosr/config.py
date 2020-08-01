@@ -20,8 +20,8 @@ prosr_params = \
         'train': {
             'dataset': {
                 'path': {
-                    'source':'',
-                    'target':'data/datasets/DIV2K/DIV2K_train_HR'
+                    'source':'/content/gdrive/My Drive/data/downscaled_52',
+                    'target':'/content/gdrive/My Drive/data/orig_images'
                     # 'target':'data/datasets/Ensemble/**'
                 },
                 'downscale':False,
@@ -64,8 +64,8 @@ prosr_params = \
             'fast_validation':-1, #-1 full validation, 0 no validation, x: max files validation
             'dataset': {
                 'path': {
-                    'source':'',
-                    'target':'data/datasets/Set14'
+                    'source':'/content/gdrive/My Drive/data/downscaled_52',
+                    'target':'/content/gdrive/My Drive/data/orig_images'
 
                 },
                 'downscale':False,
@@ -113,7 +113,7 @@ debug_params = copy.deepcopy(prosrs_params)
 debug_params.train.io.eval_epoch_freq = 1
 debug_params.train.io.print_errors_freq = 10
 debug_params.train.io.save_model_freq = 5
-debug_params.train.dataset.path.target = 'data/datasets/DIV2K/DIV2K_debug_HR'
+debug_params.train.dataset.path.target = '/content/gdrive/My Drive/data/orig_images'
 debug_params.train.epochs = 10
 debug_params.test.fast_validation = 2
 
