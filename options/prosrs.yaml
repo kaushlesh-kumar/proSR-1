@@ -19,7 +19,7 @@ test:
   dataset:
     downscale: false
     mean: [0.4488, 0.4371, 0.404]
-    path: {source: '', target: data/datasets/DIV2K/DIV2K_valid_HR}
+    path: {source: '', target: /content/gdrive/My Drive/data/orig_images}
     stddev: [0.0039215, 0.0039215, 0.0039215]
   fast_validation: -1
 train:
@@ -27,7 +27,7 @@ train:
   dataset:
     downscale: false
     mean: [0.4488, 0.4371, 0.404]
-    path: {source: '', target: data/datasets/DIV2K/DIV2K_train_HR}
+    path: {source: '/content/gdrive/My Drive/data/downscaled_52', target: '/content/gdrive/My Drive/data/orig_images'}
     stddev: [0.0039215, 0.0039215, 0.0039215]
   epochs: 300
   growing_steps: [0.12, 0.25, 0.45, 0.6, 1.0]
