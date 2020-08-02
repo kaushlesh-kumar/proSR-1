@@ -4,6 +4,7 @@ from PIL import Image
 import collections
 import glob
 import numpy as np
+#import numbers
 import os
 import os.path as osp
 
@@ -123,8 +124,8 @@ def mkdir(path):
 def print_current_errors(epoch, i, errors, t, log_name=None):
     message = '(epoch: %d, iters: %d, time: %.3f) ' % (epoch, i, t)
     for k, v in errors.items():
-        if isinstance(v, numbers.Number):
-            message += '%s: %.3f ' % (k, v)
+    #    if isinstance(v,Number):
+        message += '%s: %.3f ' % (k, v)
         if isinstance(v, list):
             avg_v = np.average(v)
             message += '%s: %.3f ' % (k, avg_v)
